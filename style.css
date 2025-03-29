@@ -1,0 +1,241 @@
+:root {
+  --highlight-color: #5da4a4;
+  --very-dark-color: hsl(180, 14%, 20%);
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: hsl(180, 52%, 96%);
+  font-family: "Spartan", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 155px;
+  background-image: url("./images/bg-header-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--highlight-color);
+}
+
+.main {
+  max-width: 1110px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+}
+
+.filter {
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -7px rgba(93, 164, 164, 0.5);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  margin-top: -36px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity 1s;
+}
+
+.filter-hidden {
+  opacity: 0;
+}
+
+.filter-clear {
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: var(--highlight-color);
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-clear:hover {
+  text-decoration: underline;
+}
+
+.job-list {
+  margin-top: 36px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-row-gap: 25px;
+}
+
+.job {
+  width: 100%;
+  height: auto;
+  padding: 35px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -7px rgba(93, 164, 164, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-left {
+  display: flex;
+  align-items: center;
+}
+
+.job-right {
+  display: flex;
+  align-items: center;
+}
+
+.job-logo {
+  width: 90px;
+  height: auto;
+}
+
+.job-info {
+  margin-left: 25px;
+  width: auto;
+}
+
+.job-company {
+  color: #40a5a4;
+  font-size: 14px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.job-title {
+  color: var(--very-dark-color);
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.job-details {
+  margin: 0;
+  padding: 0;
+}
+
+.job-detail {
+  display: inline-block;
+  color: hsl(180, 8%, 52%);
+  font-size: 15px;
+}
+
+.job-detail::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: hsl(180, 8%, 52%);
+  display: inline-block;
+  margin: 5px 15px;
+}
+
+.job-detail:last-child::after {
+  display: none;
+}
+
+.skill,
+.remove-tag {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: hsl(180, 31%, 95%);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--highlight-color);
+  margin: 7.5px 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.remove-tag {
+  padding-right: 45px;
+}
+
+.remove-tag::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 100%;
+  background-color: var(--highlight-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("./images/icon-remove.svg");
+  background-position: center;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.skill:hover,
+.skill-active {
+  background-color: var(--highlight-color);
+  color: #fff;
+}
+
+.remove-tag:hover::after {
+  background-color: var(--very-dark-color);
+}
+
+@media (max-width: 1120px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+
+  .filter-clear {
+    margin-left: 20px;
+  }
+
+  .job-list {
+    grid-row-gap: 50px;
+  }
+
+  .job {
+    flex-wrap: wrap;
+  }
+
+  .job-info {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .job-left {
+    justify-content: flex-start;
+    flex: 0 1 100%;
+    flex-wrap: wrap;
+    border-bottom: #ababab solid 1px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .job-right {
+    width: 100%;
+    justify-content: flex-start;
+    flex: 0 1 100%;
+    flex-wrap: wrap;
+    margin-left: -5px;
+  }
+
+  .job-logo {
+    width: 50px;
+    margin-top: calc(-35px - 25px);
+    margin-bottom: 20px;
+  }
+}

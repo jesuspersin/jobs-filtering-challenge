@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Job Listings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .footer-text {
+        font-size: 11px;
+        text-align: center;
+      }
+      .footer-text a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header"></header>
+    <div class="main">
+      <div id="filter-bar" class="filter filter-hidden">
+        <div class="filter-tags" id="filter-tags"></div>
+        <button id="clear-btn" class="filter-clear">Clear</button>
+      </div>
+
+      <div class="job-list" id="job-list">
+        <div class="job">
+          <div class="job-left">
+            <img
+              src="./images/photosnap.svg"
+              alt="Photosnap"
+              class="job-logo"
+            />
+            <div class="job-info">
+              <span class="job-company">Photosnap</span>
+              <span class="job-title">Senior Frontend Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">1d ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">USA Only</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Senior</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/manage.svg" alt="Manage" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">Manage</span>
+              <span class="job-title">Fullstack Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">1d ago</li>
+                <li class="job-detail">Part Time</li>
+                <li class="job-detail">Remote</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Fullstack</span>
+            <span class="skill">Midweight</span>
+            <span class="skill">Python</span>
+            <span class="skill">React</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/account.svg" alt="Account" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">Account</span>
+              <span class="job-title">Junior Frontend Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">2d ago</li>
+                <li class="job-detail">Part Time</li>
+                <li class="job-detail">USA Only</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Sass</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/myhome.svg" alt="MyHome" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">MyHome</span>
+              <span class="job-title">Junior Frontend Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">5d ago</li>
+                <li class="job-detail">Contract</li>
+                <li class="job-detail">USA Only</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img
+              src="./images/loop-studios.svg"
+              alt="Loop Studios"
+              class="job-logo"
+            />
+            <div class="job-info">
+              <span class="job-company">Loop Studios</span>
+              <span class="job-title">Software Engineer</span>
+              <ul class="job-details">
+                <li class="job-detail">1w ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">Worldwide</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Fullstack</span>
+            <span class="skill">Midweight</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Ruby</span>
+            <span class="skill">Sass</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/faceit.svg" alt="FaceIt" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">FaceIt</span>
+              <span class="job-title">Junior Backend Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">2w ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">UK Only</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Backend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">RoR</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/shortly.svg" alt="Shortly" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">Shortly</span>
+              <span class="job-title">Junior Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">2w ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">Worldwide</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">HTML</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Sass</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img src="./images/insure.svg" alt="Insure" class="job-logo" />
+            <div class="job-info">
+              <span class="job-company">Insure</span>
+              <span class="job-title">Junior Frontend Developer</span>
+              <ul class="job-details">
+                <li class="job-detail">2w ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">USA Only</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Vue</span>
+            <span class="skill">Sass</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img
+              src="./images/eyecam-co.svg"
+              alt="Eyecam Co."
+              class="job-logo"
+            />
+            <div class="job-info">
+              <span class="job-company">Eyecam Co.</span>
+              <span class="job-title">Full Stack Engineer</span>
+              <ul class="job-details">
+                <li class="job-detail">3w ago</li>
+                <li class="job-detail">Full Time</li>
+                <li class="job-detail">Worldwide</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Fullstack</span>
+            <span class="skill">Midweight</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Django</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-left">
+            <img
+              src="./images/the-air-filter-company.svg"
+              alt="The Air Filter Company"
+              class="job-logo"
+            />
+            <div class="job-info">
+              <span class="job-company">The Air Filter Company</span>
+              <span class="job-title">Front-end Dev</span>
+              <ul class="job-details">
+                <li class="job-detail">1mo ago</li>
+                <li class="job-detail">Part Time</li>
+                <li class="job-detail">Worldwide</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job-right">
+            <span class="skill">Frontend</span>
+            <span class="skill">Junior</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Sass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-text">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/goodluck91">Good-Luck</a>.
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
